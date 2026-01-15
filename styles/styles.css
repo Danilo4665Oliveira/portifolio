@@ -110,6 +110,10 @@ a:hover{
     transition: transform 0.3s ease;
 }
 
+.projetos img{
+    max-width: 100%;
+}
+
 .projetos,.tags,a,h3,p,span{
     padding: 1.5vh;
 }

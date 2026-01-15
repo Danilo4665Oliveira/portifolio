@@ -42,7 +42,7 @@ a:hover{
 }
 
 .menu-toggle {
-    display: none; /* Escondido no PC */
+    display: none; 
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -50,13 +50,13 @@ a:hover{
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1001; /* Garante que fique acima de tudo */
+    z-index: 1001; 
 }
 
 .bar {
     width: 100%;
     height: 3px;
-    background-color: var(--cor-primaria); /* O azul que você já usa */
+    background-color: var(--cor-primaria); 
     border-radius: 10px;
     transition: 0.3s;
 }
@@ -90,13 +90,13 @@ a:hover{
 }
 
 .titulo-secao {
-    width: 100%; /* Garante que ele fique em cima dos cards */
+    width: 100%; 
     text-align: center;
     color: var(--cor-primaria);
     font-family: var(--fonte-principal);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 40px; /* Espaço entre o título e os cards */
+    margin-bottom: 40px;
     font-size: 2rem;
 }
 
@@ -196,7 +196,7 @@ a:hover{
     width: 100%;
     overflow: hidden;
     padding: 20px 0;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); /* Efeito de sumir suave nas pontas */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
 }
 
 .carrossel-track {
@@ -295,26 +295,36 @@ footer{
 @media (max-width: 768px) {
     /*MENU*/
     .menu-toggle {
+        position: fixed;
         display: flex;
+    }
+    
+    .bar {
+    width: 50%;
+    height: 3px;
+    border-radius: 10px;
+    transition: 0.3s;
     }
 
     .nav-list {
-        display: none; 
-        flex-direction: column;
-        position: fixed; 
+        position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh; 
-        background-color: rgba(10, 10, 10, 0.95); 
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: #0a0a0a;
+        display: none;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 1000;
-        gap: 30px;
+        z-index: 1001;
     }
 
     .nav-list.active {
         display: flex; 
+        background-color: rgba(10, 10, 10, 0.8); 
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .nav-list li a {
@@ -322,6 +332,7 @@ footer{
     }
 
     /*TEXTO*/
+    
     .texto-inicio{
         padding: 10px;
     }
@@ -336,5 +347,23 @@ footer{
         animation: pulsar 2s infinite ease-in-out; 
         color: var(--cor-primaria);
         text-shadow: 0 0 10px var(--cor-primaria);
+    }
+
+    /*ICONE DE CONTATO*/
+    .container-contatos {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center;
+        gap: 20px; 
+        flex-wrap: nowrap; 
+    }
+
+    .link-contato i {
+        font-size: 2rem; /
+    }
+
+    .link-contato span {
+        font-size: 0.8rem; 
     }
 }

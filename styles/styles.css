@@ -41,6 +41,26 @@ a:hover{
     transition-duration: 0.4s;
 }
 
+.menu-toggle {
+    display: none; /* Escondido no PC */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Garante que fique acima de tudo */
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-primaria); /* O azul que você já usa */
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
 /*INICIO*/
 
 #inicio{
@@ -57,7 +77,6 @@ a:hover{
     clip-path: polygon(25% 0%, 75% 0%, 100% 52%, 75% 100%, 25% 100%, 0% 50%);
     object-fit: cover;
 }
-
 
 /*PROJETOS*/
 
@@ -253,4 +272,69 @@ footer{
     justify-content: center;
     align-items: center;
     color: var(--cor-secundaria);
+}
+
+/*ANIMAÇÕES*/
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 0px var(--cor-primaria);
+    }
+    50% {
+        transform: scale(1.15); 
+        text-shadow: 0 0 15px var(--cor-primaria);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0px var(--cor-primaria);
+    }
+}
+
+/*MOBILE*/
+@media (max-width: 768px) {
+    /*MENU*/
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
+        background-color: rgba(10, 10, 10, 0.95); 
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        gap: 30px;
+    }
+
+    .nav-list.active {
+        display: flex; 
+    }
+
+    .nav-list li a {
+        font-size: 1.5rem;
+    }
+
+    /*TEXTO*/
+    .texto-inicio{
+        padding: 10px;
+    }
+
+    .texto-inicio p{
+        max-width: 200px;
+        max-height: auto;
+    }
+
+    /*ANIMAÇÕES CONTATOS*/
+    .link-contato i {
+        animation: pulsar 2s infinite ease-in-out; 
+        color: var(--cor-primaria);
+        text-shadow: 0 0 10px var(--cor-primaria);
+    }
 }

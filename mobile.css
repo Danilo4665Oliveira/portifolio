@@ -1,0 +1,187 @@
+@media (max-width: 1024px) {
+  /* Navbar: some os links de texto, mostra o botão hamburguer */
+  .navbar-container {
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .navbar-container > .navbar-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menu mobile: barra com a mesma cor de fundo das seções (#111),
+     que aparece deslizando abaixo da navbar quando o hamburguer é acionado */
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    z-index: 15;
+  }
+
+  .mobile-menu.active {
+    max-height: 400px;
+  }
+
+  .mobile-menu > ul {
+    list-style: none;
+    padding: 90px 30px 30px;
+  }
+
+  .mobile-menu > ul > li {
+    text-align: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-menu > ul > li:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-menu > ul > li > a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+  }
+
+  /* Showcase */
+  .showcase-container > h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 3.3rem;
+  }
+
+  .showcase-container > p {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* Sobre mim */
+  .about-me-content {
+    flex-direction: column;
+  }
+
+  .about-me-content > img {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+  }
+
+  .about-me-content p {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* Habilidades - Carrossel */
+  .skills-carousel {
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .skill-item {
+    padding: 30px;
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-item p {
+    font-size: 0.875rem;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  /* Projetos */
+  .projects-content {
+    margin-top: 40px;
+  }
+
+  .project-item {
+    flex-direction: column;
+  }
+
+  .projects-content .project-item:nth-child(2),
+  .projects-content .project-item:nth-child(4) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .projects-content .project-item:nth-child(2) > .project-item-image,
+  .projects-content .project-item:nth-child(4) > .project-item-image {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .projects-content .project-item:nth-child(2) > .project-text,
+  .projects-content .project-item:nth-child(4) > .project-text {
+    order: 2;
+  }
+
+  .project-text {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .project-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-text p {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+  .project-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Formulário */
+  .contact-form {
+    margin-top: 40px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-items {
+    margin-bottom: 15px;
+  }
+
+  .social-items a:last-child {
+    margin-right: 0;
+  }
+
+  /* Utilities */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-container {
+    padding: 30px;
+  }
+}

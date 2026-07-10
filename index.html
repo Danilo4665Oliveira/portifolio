@@ -1,158 +1,381 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Fonte-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <!--CSS-->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!--Icone da página-->
-    <link rel="icon" href="../assets/icon/favicon-32x32.png" type="image/DO-icon">
-    <!--Icon do DevIcon-->
-     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <title>Portifólio</title>
-</head>
+<html>
+  <head>
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-    <header>
-        <div id="logo"><img src="../assets/icon/favicon-32x32.png" alt="Logo">
-        </div>
-       <nav>
-        <button class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-        </button>
-        <ul class="nav-list">
-            <li><a href="#inicio"> INICIO </a></li>
-            <li><a href="#projetos"> PROJETOS </a></li>
-            <li><a href="#sobre-mim"> SOBRE </a></li>
-            <li><a href="#habilidades"> HABILIDADES </a></li>
-            <li><a href="#contato"> CONTATO </a></li>
-        </ul>
+    <script
+      src="https://kit.fontawesome.com/b3f89f3272.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul class="navbar-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre-mim">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
-    </header>
 
-    <main>        
-        <section id="inicio">
-            <div class="texto-inicio">
-                <h1>Danilo Oliveira</h1>
-                <p>Transformando ideias em interfaces e bugs em aprendizado.</p>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre-mim">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <div id="inicio" class="showcase-container">
+      <h1>Oi, eu sou o Danilo!</h1>
+      <p>A Professional Web Developer</p>
+    </div>
+
+    <!-- SOBRE MIM -->
+    <div id="sobre-mim" class="section-container">
+      <div class="section-content">
+        <h2 class="section-title">Sobre Mim</h2>
+
+        <div class="about-me-content">
+          <img src="./images/portifolio.PNG" alt="Danilo Oliveira" />
+          <p>
+            Olá, sou José Danilo! Sou um desenvolvedor em constante evolução,
+            trilhando o caminho para me tornar full stack. Minha jornada na
+            tecnologia é guiada pela vontade de construir uma base conceitual
+            forte, entendendo o 'porquê' por trás da tecnologia de ponta a
+            ponta. Mais do que apenas replicar código, busco dominar a lógica
+            para conectar front-end e back-end, integrando essas aplicações com
+            o ambiente em nuvem da AWS Cloud para criar projetos cada vez mais
+            robustos
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Habilidades -->
+    <div class="section-container">
+      <div class="section-content">
+        <h2 id="habilidades" class="section-title">Habilidades</h2>
+
+        <div class="skills-carousel">
+          <button
+            class="carousel-arrow carousel-arrow-prev"
+            id="skillsPrev"
+            aria-label="Habilidade anterior"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="skills-viewport">
+            <div class="skills-track" id="skillsTrack">
+              <div class="skill-item">
+                <img src="./images/html-5.svg" alt="HTML" />
+                <span>HTML</span>
+                <p>
+                  Linguagem responsável por definir o esqueleto de sites. Possuo
+                  amplo domínio.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/css-3.svg" alt="CSS" />
+                <span>CSS</span>
+                <p>
+                  Linguagem responsável por definir o estilo dos sites. Possuo
+                  amplo domínio.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/javascript.svg" alt="JavaScript" />
+                <span>JavaScript</span>
+                <p>
+                  Linguagem responsável por adicionar lógica aos sites. Possuo
+                  amplo domínio
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/react.svg" alt="React" />
+                <span>React</span>
+                <p>
+                  Biblioteca JavaScript para construção de interfaces reativas e
+                  componentizadas. Possuo amplo domínio.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/typescript-icon.svg" alt="TypeScript" />
+                <span>TypeScript</span>
+                <p>
+                  Superset do JavaScript com tipagem estática, usado para maior
+                  segurança e escalabilidade no código.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/nodejs.svg" alt="NodeJs" />
+                <span>NodeJs</span>
+                <p>
+                  Ambiente de execução JavaScript no back-end, usado para criar
+                  APIs e serviços.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/aws-ec2.svg" alt="EC2" />
+                <span>AWS EC2</span>
+                <p>
+                  Serviço de computação em nuvem da AWS para hospedar aplicações
+                  escaláveis.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/aws-s3.svg" alt="S3" />
+                <span>AWS S3</span>
+                <p>
+                  Serviço de armazenamento de objetos da AWS para arquivos e
+                  mídias.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/postgresql.svg" alt="PostGree" />
+                <span>PostgreeSQL</span>
+                <p>
+                  Banco de dados relacional robusto, usado para modelagem e
+                  persistência de dados.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/git-icon.svg" alt="Git" />
+                <span>Git</span>
+                <p>
+                  Sistema de controle de versão usado para acompanhar mudanças
+                  no código e organizar o histórico de desenvolvimento.
+                </p>
+              </div>
+
+              <div class="skill-item">
+                <img src="./images/github-icon.svg" alt="GitHub" />
+                <span>Git</span>
+                <p>
+                  Plataforma de hospedagem de repositórios Git, usada para
+                  versionamento, colaboração e portfólio de projetos
+                </p>
+              </div>
             </div>
-            <figure id="foto-inicio">
-                <img src="../assets/imagens-portifolio/foto-curriculo.jpg" alt="Foto de Danilo Oliveira">
-            </figure>
-        </section>
+          </div>
 
-        <section id="projetos">
-            <h2 class="titulo-secao">MEUS PROJETOS</h2>
+          <button
+            class="carousel-arrow carousel-arrow-next"
+            id="skillsNext"
+            aria-label="Próxima habilidade"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
 
-            <article class="projetos">
-                <div class="print-placeholder">
-                    <img src="./assets/imagens-projetos/Detona Ralph.png" alt="Print do jogo">
-                </div>
-                <h3>Jogo Do Detona Ralph</h3>
-                <p>Jogo feito com HTML, CSS e JavaScript puro, treinando a lógica</p>
-                <div class="tags">
-                    <span>HTML5/CSS3</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://github.com/Danilo4665Oliveira/Game-Ralph.git" class="btn-projeto" target="_blank">Ver Repositório</a>
-            </article>
-            
-            <article class="projetos">
-                <div class="print-placeholder">
-                    <img src="./assets/imagens-projetos/Barber-app.png" alt="Projeto Barbearia">
-                </div>
-                <h3>SaaS Barbearia</h3>
-                <p>Desenvolvimento de um SaaS para gestão de barbearias, utilizando Next.js e TypeScript, com integração ao banco de dados PostgreSQL (Neon) via Prisma ORM para listagem dinâmica de unidades e serviços.</p>
-                <div class="tags">
-                    <span>PostegreSQL</span>
-                    <span>Next.js</span>
-                    <span>Node.Js</span>
-                    <span>TypeScript</span>
-                </div>
-                <a href="https://barber-app-rose.vercel.app/" class="btn-projeto">Ver Projeto</a>
-            </article>
-                
-            <article class="projetos">
-                <div class="print-placeholder">
-                    <img src="xxxx" alt="xxxx">
-                </div>
-                <h3>Nome do Projeto Back3</h3>
-                <p>Descrição da lógica, banco de dados e ferramentas utilizadas.</p>
-                <div class="tags">
-                    <span>Node.js</span>
-                    <span>PostgreSQL</span>
-                </div>
-                <a href="#" class="btn-projeto">Ver Repositório</a>
-            </article>
-        </section>
+        <div class="skills-dots" id="skillsDots"></div>
+      </div>
+    </div>
 
-        <section id="sobre-mim">
-            <h3>Sobre Mim</h3>
-            <p>Meu nome é Danilo Oliveira, sou movido pela curiosidade de aprender algo novo todos os dias, tenho maior apreço pelo BackEnd mas vou pro front caso a situação necessite.</p>
-        </section>
+    <!-- Projetos -->
+    <div class="section-container">
+      <div class="section-content">
+        <h2 id="projetos" class="section-title">Projetos</h2>
 
-        <section id="habilidades">
-            <h2 class="titulo-secao">HABILIDADES</h2>
-            <div class="carrossel-container">
-                <div class="carrossel-track">
-                    <span class="tag-skills"><i class="devicon-html5-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-css3-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-javascript-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-nodejs-plain-wordmark colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-python-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-postgresql-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-git-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-github-original colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-csharp-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-tailwindcss-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-mysql-plain colored"></i></span>
+        <div class="projects-content">
+          <div class="project-item">
+            <!-- IMAGEM -->
+            <div class="project-item-image project-item-1"></div>
 
-                    <span class="tag-skills"><i class="devicon-html5-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-css3-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-javascript-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-nodejs-plain-wordmark colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-python-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-postgresql-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-git-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-github-original colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-csharp-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-tailwindcss-plain colored"></i></span>
-                    <span class="tag-skills"><i class="devicon-mysql-plain colored"></i></span>
-                </div>
+            <!-- TEXTO TÍTULO E DESCRIÇÃO -->
+            <div class="project-text">
+              <h3>SaaS Barbearia</h3>
+              <p>
+                Desenvolvimento de um SaaS para gestão de barbearias, utilizando
+                Next.js e TypeScript, com integração ao banco de dados
+                PostgreSQL (Neon) via Prisma ORM para listagem dinâmica de
+                unidades e serviços.
+              </p>
+
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/Danilo4665Oliveira/barber-app"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Ver repositório
+                </a>
+                <a
+                  href="https://barber-app-rose.vercel.app/"
+                  target="_blank"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Ver aplicação
+                </a>
+              </div>
             </div>
-        </section>
-        
-        <section id="contato">
-            <h2 class="titulo-secao">VAMOS CONVERSAR?</h2>
-            <p class="texto-contato">Estou sempre aberto a novos desafios e colaborações em projetos.</p>
-    
-            <div class="container-contatos">
-                <a href="https://github.com/Danilo4665Oliveira" target="_blank" class="link-contato">
-                    <i class="devicon-github-original"></i>
-                    <span>GitHub</span>
+          </div>
+
+          <!-- <div class="project-item"> -->
+          <!-- IMAGEM -->
+          <!-- <div class="project-item-image project-item-2"></div> -->
+
+          <!-- TEXTO TÍTULO E DESCRIÇÃO -->
+          <!-- <div class="project-text">
+              <h3>Página de Hotel</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                optio illum dolore veritatis illo omnis saepe reprehenderit id a
+                consequatur.
+              </p>
+
+              <div class="project-buttons">
+                <a
+                  href="https://github.com/SEU_USUARIO/SEU_REPOSITORIO"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  Ver repositório
                 </a>
-                <a href="https://www.linkedin.com/in/jos%C3%A9-danilo-166a891b8/" target="_blank" class="link-contato">
-                    <i class="devicon-linkedin-plain"></i>
-                    <span>LinkedIn</span>
+                <a
+                  href="https://seu-app-no-ar.com"
+                  target="_blank"
+                  class="project-btn project-btn-primary"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Ver aplicação
                 </a>
-                <a href="mailto:4665danilo@gmail.com" class="link-contato">
-                    <i class="devicon-google-plain"></i>
-                    <span>E-mail</span>
-                </a>
+              </div>
+            </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="project-item"> -->
+          <!-- IMAGEM -->
+          <!-- <div class="project-item-image project-item-3"></div> -->
+
+          <!-- TEXTO TÍTULO E DESCRIÇÃO -->
+          <!-- <div class="project-text">
+              <h3>Portfólio de Programador</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                optio illum dolore veritatis illo omnis saepe reprehenderit id a
+                consequatur.
+              </p>
             </div>
-        </section>
+          </div> -->
 
-     </main>
-    
-    <footer>
-        <p>&copy;José Danilo Oliveira Feitoza</p>
-    </footer>
+          <!-- <div class="project-item"> -->
+          <!-- IMAGEM -->
+          <!-- <div class="project-item-image project-item-4"></div> -->
 
-</body>
+          <!-- TEXTO TÍTULO E DESCRIÇÃO -->
+          <!-- <div class="project-text">
+              <h3>Previsão do Tempo</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                optio illum dolore veritatis illo omnis saepe reprehenderit id a
+                consequatur.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
 
-<script src="./scripts/scripts.js"></script>
+    <!-- contato -->
+    <div class="section-container">
+      <div class="section-content">
+        <h2 id="contato" class="section-title">Entre em contato</h2>
+
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="https://formspree.io/f/mwvddgra"
+          method="POST"
+        >
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            placeholder="Seu nome"
+            class="form-input"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Seu e-mail"
+            class="form-input"
+            required
+          />
+
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Sua mensagem"
+            class="form-input"
+            required
+          ></textarea>
+
+          <input type="submit" value="Enviar" class="form-button" />
+
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <div class="social-items">
+        <a href="mailto:4665danilo@gmail.com"
+          ><i class="fa-solid fa-envelope fa-xl"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/jos%C3%A9-danilo-166a891b8/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin fa-xl"></i>
+        </a>
+
+        <a href="https://github.com/Danilo4665Oliveira" target="_blank">
+          <i class="fa-brands fa-github fa-xl"></i>
+        </a>
+      </div>
+
+      <p>Copyright Danilo 2026</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
